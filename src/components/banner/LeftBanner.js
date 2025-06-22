@@ -45,40 +45,42 @@ const LeftBanner = () => {
       </div>
 
       <div className="flex flex-col lgl:flex-row gap-6 justify-between">
-        <div>
-          <h2 className="text-[10px] sm:text-sm uppercase font-titleFont mb-3 sm:mb-4 text-gray-400">
-            Find me in
-          </h2>
-          <div className="flex gap-3 sm:gap-4">
-            <a
-              href="https://github.com/Aadhithyadevendran"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span className="bannerIcon">
-                <FaGithub />
-              </span>
-            </a>
-            <a
-              href="https://www.facebook.com/Aadhithyaa03"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span className="bannerIcon">
-                <FaFacebookF />
-              </span>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/aadhithyad02"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span className="bannerIcon">
-                <FaLinkedinIn />
-              </span>
-            </a>
-          </div>
-        </div>
+        {/* "Find me in" section - hidden on medium screens and below */}
+<div className="hidden lgl:block">
+  <h2 className="text-[10px] sm:text-sm uppercase font-titleFont mb-3 sm:mb-4 text-gray-400">
+    Find me in
+  </h2>
+  <div className="flex gap-3 sm:gap-4">
+    <a
+      href="https://github.com/Aadhithyadevendran"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <span className="bannerIcon">
+        <FaGithub />
+      </span>
+    </a>
+    <a
+      href="https://www.facebook.com/Aadhithyaa03"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <span className="bannerIcon">
+        <FaFacebookF />
+      </span>
+    </a>
+    <a
+      href="https://www.linkedin.com/in/aadhithyad02"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <span className="bannerIcon">
+        <FaLinkedinIn />
+      </span>
+    </a>
+  </div>
+</div>
+
 
         <div>
           <h2 className="text-[10px] sm:text-sm uppercase font-titleFont mb-3 sm:mb-4 text-gray-400">
