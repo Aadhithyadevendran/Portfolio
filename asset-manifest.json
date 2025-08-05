@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.15a2bf01.css",
-    "main.js": "/Portfolio/static/js/main.b2ce6c67.js",
+    "main.css": "/Portfolio/static/css/main.991913f0.css",
+    "main.js": "/Portfolio/static/js/main.785b1ab9.js",
     "static/media/IMG20241105124758.png": "/Portfolio/static/media/IMG20241105124758.2b2f70a761ae6bf0e81c.png",
+    "static/media/portfolio.png": "/Portfolio/static/media/portfolio.41b2c9e22bd356831ff5.png",
     "static/media/logo.jpg": "/Portfolio/static/media/logo.7244bea2c64fbe5c8baf.jpg",
     "static/media/whatschat.jpg": "/Portfolio/static/media/whatschat.5b8c9f78d077a3a14837.jpg",
     "static/media/hostel.jpeg": "/Portfolio/static/media/hostel.275507bbff53eb4470cf.jpeg",
@@ -10,13 +11,14 @@
     "static/media/exam.jpg": "/Portfolio/static/media/exam.143584ff2ba550444fd2.jpg",
     "static/media/rural.jpg": "/Portfolio/static/media/rural.9ae7f0d0ad9010e27b96.jpg",
     "static/media/contactImg.png": "/Portfolio/static/media/contactImg.8ddfbfd11798f881db54.png",
+    "static/media/blockDag.jpg": "/Portfolio/static/media/blockDag.6cf081ec158a90e20dd8.jpg",
     "static/media/resume_aadhithya.pdf": "/Portfolio/static/media/resume_aadhithya.5538948f87695df4011f.pdf",
     "index.html": "/Portfolio/index.html",
-    "main.15a2bf01.css.map": "/Portfolio/static/css/main.15a2bf01.css.map",
-    "main.b2ce6c67.js.map": "/Portfolio/static/js/main.b2ce6c67.js.map"
+    "main.991913f0.css.map": "/Portfolio/static/css/main.991913f0.css.map",
+    "main.785b1ab9.js.map": "/Portfolio/static/js/main.785b1ab9.js.map"
   },
   "entrypoints": [
-    "static/css/main.15a2bf01.css",
-    "static/js/main.b2ce6c67.js"
+    "static/css/main.991913f0.css",
+    "static/js/main.785b1ab9.js"
   ]
 }
