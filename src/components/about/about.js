@@ -11,7 +11,7 @@ const About = () => {
   className="w-full py-10 sm:py-10 md:py-16 lgl:py-20 border-b-[1px] border-b-black"
   initial={{ opacity: 0, y: 60 }}
   whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6}}
+  transition={{ duration: 0.4}}
   viewport={{ once: true, amount: 0.2 }}
 >
       <Title title="About Me" des="Who I Am" />

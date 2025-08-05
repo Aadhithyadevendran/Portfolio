@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Title from '../layouts/Title';
-import { exam, hostel, rural ,whats} from "../../assets/index";
+import { exam, hostel, rural ,whats,port,blockDag} from "../../assets/index";
 import ProjectsCard from './ProjectsCard';
 import { motion } from "framer-motion";
 
@@ -33,6 +33,19 @@ const Projects = () => {
       src: hostel,
       githubLink: "https://github.com/yourusername/hostel-management",
     },
+    {
+  title: "blocDag Currency Exchanger",
+  des: "A decentralized currency exchanger that allows users to swap currencies directly via MetaMask without any transaction fees, leveraging blockchain technology for secure and fast exchanges.",
+  src: blockDag,
+  githubLink: "https://github.com/yourusername/blocDag-currency-exchanger",
+},
+    {
+  title: "Personal Portfolio Website",
+  des: "My personal portfolio website showcasing my skills, projects, and experience, built with React and Tailwind CSS.",
+  src: port,
+  githubLink: "https://github.com/yourusername/portfolio",
+},
+
     
   ];
 
@@ -42,14 +55,14 @@ const Projects = () => {
   className="w-full py-10 border-b-[1px] border-b-black px-2 sm:px-0"
   initial={{ opacity: 0, y: 60 }}
   whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6 }}
+  transition={{ duration: 0.4 }}
   viewport={{ once: true, amount: 0.2 }}
 >
       <div className="flex justify-center items-center text-center mb-6 sm:mb-10">
         <Title des="My Projects" />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 xl:gap-14">
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 xl:gap-14">
         {(showAll ? projects : projects.slice(0, 3)).map((project, index) => (
           <ProjectsCard
             key={index}

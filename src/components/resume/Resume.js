@@ -55,7 +55,7 @@ const Resume = () => {
   className="w-full pt-16 lgl:pt-10"
   initial={{ opacity: 0, y: 50 }}
   whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6 }}
+  transition={{ duration: 0.4 }}
   viewport={{ once: true, amount: 0.3 }}
 >
 

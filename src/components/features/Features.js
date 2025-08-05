@@ -11,7 +11,7 @@ const Features = () => {
   className="w-full pb-0 mt-10"
   initial={{ opacity: 0, y: 60 }}
   whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6 }}
+  transition={{ duration: 0.4 }}
   viewport={{ once: true, amount: 0.2 }}
 >      <Title title="My Core Skills" des="Tech Expertise" />
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-20">
