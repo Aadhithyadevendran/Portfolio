@@ -26,6 +26,13 @@
          duration-300;
 }
 
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
 .bgOpacity {
 @apply bg-black bg-opacity-40;
                   }
@@ -42,4 +49,14 @@
 }
 .scrollbar-hide::-webkit-scrollbar{
     display: none;
+}
+
+/* styles.css or your Tailwind base styles */
+.active-nav {
+  color: red !important;
+}
+
+/* Optional: dark mode specific styling */
+.dark .active-nav {
+  color: #ff4c4c !important; /* Slightly different red for dark mode if you want */
 }

@@ -3,18 +3,7 @@ import { motion } from "framer-motion";
 import ResumeCard from "./ResumeCard";
 
 // Skill tag component with mobile-specific adjustments
-const SkillTags = ({ skills }) => (
-  <div className="flex flex-wrap gap-[6px] px-[2px] sm:px-0 mt-2 sm:mt-4">
-    {skills.map((skill, index) => (
-      <span
-        key={index}
-        className="text-[10px] sm:text-xs px-2 sm:px-3 py-1 bg-black bg-opacity-40 text-designColor rounded-full shadow-shadowOne hover:bg-opacity-60 duration-300"
-      >
-        {skill}
-      </span>
-    ))}
-  </div>
-);
+
 
 const Experience = () => {
   return (

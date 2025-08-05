@@ -1,12 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    darkMode: "class", // ✅ add this line
+  darkMode: "class", // ✅ add this line
 
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
-  
+
   theme: {
     extend: {
-      screens:{
+      screens: {
         xs: "320px",
         sm: "375px",
         sml: "500px",
@@ -21,7 +21,7 @@ module.exports = {
         titleFont: ["Montserrat", "sans-serif"],
       },
       colors: {
-bodyColor: "#2a2e34", // a lighter shade with a soft gray-blue tone
+        bodyColor: "#2a2e34", // a lighter shade with a soft gray-blue tone
         lightText: "#c4cfde",
         boxBg: "linear-gradient(145deg, #1e2024, #23272b)",
         designColor: "#ff014f",

@@ -2,23 +2,28 @@ import React from "react";
 import Title from "../layouts/Title";
 import ResumePDF from "./resume_aadhithya.pdf";
 import image from "./WhatsApp_Image_2025-06-22_at_11.59.35_c1a2465d-removebg-preview.png";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section
-      id="about"
-      className="w-full py-10 sm:py-10 md:py-16 lgl:py-20 border-b-[1px] border-b-black"
-    >
+    <motion.section
+  id="about"
+  className="w-full py-10 sm:py-10 md:py-16 lgl:py-20 border-b-[1px] border-b-black"
+  initial={{ opacity: 0, y: 60 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6}}
+  viewport={{ once: true, amount: 0.2 }}
+>
       <Title title="About Me" des="Who I Am" />
 
       <div className="w-full flex flex-col mdl:flex-row gap-10 lgl:gap-20">
         {/* Left: Image */}
-        <div className="w-full md:w-[420px] lgl:w-[30%] h-[450px] rounded-lg overflow-hidden 
+        <div
+          className="w-full md:w-[420px] lgl:w-[30%] h-[450px] rounded-lg overflow-hidden 
   shadow-[0_10px_40px_rgba(0,0,0,0.25)] 
   dark:shadow-[0_10px_40px_rgba(255,255,255,0.08)] 
-  transition-shadow duration-300 mx-auto lgl:mx-0">
-
-
+  transition-shadow duration-300 mx-auto lgl:mx-0"
+        >
           <img
             src={image}
             alt="Profile"
@@ -28,10 +33,9 @@ const About = () => {
 
         {/* Right: About Me Text */}
         <div className="w-full lgl:w-[60%] flex flex-col gap-6 px-4 sm:px-6 lgl:px-0">
-
-         <h3 className="text-3xl font-bold text-black dark:text-white">
-  I’m Aadhithya
-</h3>
+          <h3 className="text-3xl font-bold text-black dark:text-white">
+            I’m Aadhithya
+          </h3>
 
           {/* ✅ Mobile and Tablet Only */}
           <div className="block mdl:hidden text-base font-bodyFont leading-7 text-gray-500">
@@ -82,7 +86,7 @@ const About = () => {
           </a>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

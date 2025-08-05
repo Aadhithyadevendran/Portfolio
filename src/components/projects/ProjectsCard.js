@@ -14,6 +14,8 @@ const ProjectsCard = ({ title, des, src, githubLink }) => {
       transition-all duration-500 
       text-black dark:text-white
     ">
+
+
       {/* Image */}
       <div className="w-full h-40 sm:h-60 overflow-hidden rounded-lg">
         <img
@@ -35,21 +37,14 @@ const ProjectsCard = ({ title, des, src, githubLink }) => {
                 href={githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-base w-8 h-8 sm:w-10 sm:h-10 
-                  rounded-full 
-                  bg-black dark:bg-white 
-                  inline-flex justify-center items-center 
-                  text-gray-400 hover:text-designColor 
-                  duration-300"
+                className="text-base w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300"
               >
                 <BsGithub />
               </a>
             </div>
           </div>
-          <p className="text-xs sm:text-sm tracking-wide mt-2 sm:mt-3 
-            text-gray-700 dark:text-gray-300 
-            hover:text-black dark:hover:text-gray-100 
-            duration-300">
+          <p className="text-xs sm:text-sm tracking-wide mt-2 sm:mt-3 text-gray-700 dark:text-gray-300 group-hover:text-black dark:group-hover:text-gray-100 duration-300">
+
             {des}
           </p>
         </div>

@@ -2,11 +2,18 @@ import React from 'react';
 import { FaReact, FaPython, FaJava } from "react-icons/fa";
 import Title from '../layouts/Title';
 import Card from './Card';
+import { motion } from "framer-motion";
 
 const Features = () => {
   return (
-    <section id="features" className="w-full pb-0 mt-10">
-      <Title title="My Core Skills" des="Tech Expertise" />
+<motion.section
+  id="features"
+  className="w-full pb-0 mt-10"
+  initial={{ opacity: 0, y: 60 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true, amount: 0.2 }}
+>      <Title title="My Core Skills" des="Tech Expertise" />
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-20">
         <Card
           title="React Development"
@@ -24,7 +31,7 @@ const Features = () => {
           icon={<FaPython />}
         />
       </div>
-    </section>
+    </motion.section>
   );
 };
 

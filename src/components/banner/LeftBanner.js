@@ -1,9 +1,10 @@
 import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { Link } from "react-scroll";
+
 import {
   FaFacebookF,
   FaLinkedinIn,
-  FaInstagram,
   FaGithub,
   FaReact,
   FaJava,
@@ -42,6 +43,19 @@ const LeftBanner = () => {
           A Final Year B.Tech Information Technology Student at Saveetha
           Engineering College, Chennai.
         </p>
+
+        <Link
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="inline-block w-fit mt-4"
+        >
+          <button className="px-6 py-2 text-sm sm:text-base font-medium text-white bg-designColor rounded-md hover:bg-opacity-80 transition duration-300">
+            Contact Me
+          </button>
+        </Link>
       </div>
 
       <div className="flex flex-col lgl:flex-row gap-6 justify-between">

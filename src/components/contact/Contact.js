@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Title from '../layouts/Title';
 import ContactLeft from './ContactLeft';
 import emailjs from 'emailjs-com';
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const [username, setUsername] = useState('');
@@ -57,8 +58,14 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="w-full py-10 border-b border-b-gray-300 dark:border-b-black">
-      <div className="flex justify-center items-center text-center">
+<motion.section
+  id="contact"
+  className="w-full py-10 border-b border-b-gray-300 dark:border-b-black"
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8}}
+  viewport={{ once: true, amount: 0.3 }}
+>      <div className="flex justify-center items-center text-center">
         <Title title="CONTACT" des="Contact With Me" textSize="text-xl sm:text-2xl md:text-3xl" />
       </div>
 
@@ -156,7 +163,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
