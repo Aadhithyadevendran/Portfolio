@@ -7,15 +7,14 @@ const Achievement = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 0.5 } }}
-      className="w-full flex flex-col lgl:flex-row gap-10 lgl:gap-20"
+      className="w-full flex flex-col lgl:flex-row gap-10"
     >
       {/* Certifications Column */}
-      <div className="w-full lgl:w-1/2">
-
-        <div className="py-6 lgl:py-12 font-titleFont flex flex-col gap-4">
+      <div className="w-full lgl:w-1/2 flex flex-col">
+        <div className="py-6 lgl:py-12 font-titleFont">
           <h2 className="text-3xl md:text-4xl font-bold">Certifications</h2>
         </div>
-        <div className="mt-6 lgl:mt-6 w-full h-auto border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
+        <div className="mt-4 w-full border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
           <ResumeCard
             title="Microsoft Azure - AI Associate Engineer"
             subTitle="ICT Academy - April 2024"
@@ -44,12 +43,11 @@ const Achievement = () => {
       </div>
 
       {/* Hackathons Column */}
-      <div className="w-full lgl:w-1/2">
-
-        <div className="py-6 lgl:py-12 font-titleFont flex flex-col gap-4">
+      <div className="w-full lgl:w-1/2 flex flex-col">
+        <div className="py-6 lgl:py-12 font-titleFont">
           <h2 className="text-3xl md:text-4xl font-bold">Hackathons</h2>
         </div>
-        <div className="mt-6 lgl:mt-6 w-full h-auto border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
+        <div className="mt-4 w-full border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
           <ResumeCard
             title="Qualcomm Hackathon"
             subTitle="Bangalore"
@@ -66,10 +64,8 @@ const Achievement = () => {
             title="Gidy Hackathon"
             subTitle="Chennai"
             result="Finalists"
-  des="Built a hostel management system with real-time complaint tracking and room booking using Python and Streamlit. Finalist among 50+ teams."
+            des="Built a hostel management system with real-time complaint tracking and room booking using Python and Streamlit. Finalist among 50+ teams."
           />
-          
-          
         </div>
       </div>
     </motion.div>

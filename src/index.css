@@ -4,12 +4,28 @@
 @tailwind utilities;
 
 @layer components{
-    .bannerIcon{
-        @apply w-16 h-16 bg-black bg-opacity-25 text-gray-200 text-xl inline-flex items-center justify-center rounded-md shadow-shadowOne hover:bg-opacity-40 hover:-translate-y-1 transition-all hover:text-designColor cursor-pointer duration-300;
-    }
+    /* styles/globals.css or index.css */
+.bannerIcon {
+  @apply w-10 h-10 text-xl bg-gray-200 dark:bg-[#2a2e34]
+         rounded-lg inline-flex items-center justify-center
+         cursor-pointer hover:text-designColor duration-300
+         shadow-md dark:shadow-shadowOne;
+}
+
     .resumeLi {
-    @apply w-full h-20 bg-black bg-opacity-25 text-xl text-gray-300 flex justify-center cursor-pointer hover:bg-opacity-40 duration-300 items-center border-[1px] rounded-none;
-         }
+  @apply w-full h-20 
+         flex justify-center items-center 
+         text-base sm:text-lg font-medium 
+         cursor-pointer 
+         bg-gray-100 text-black 
+         hover:bg-gray-200 
+         dark:bg-black dark:bg-opacity-25 dark:text-gray-300 
+         dark:hover:bg-opacity-40 
+         border border-gray-300 dark:border-gray-600 
+         rounded-lg 
+         duration-300;
+}
+
 .bgOpacity {
 @apply bg-black bg-opacity-40;
                   }

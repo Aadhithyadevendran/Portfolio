@@ -31,4 +31,10 @@ export const navLinksdata = [
     title: "Contact",
     link: "contact",
   },
+  {
+  _id: 1007,
+  title: "Theme",
+  link: "theme", // dummy, we’ll handle click separately
+  isToggle: true, // custom flag to identify it's a toggle
+},
 ];

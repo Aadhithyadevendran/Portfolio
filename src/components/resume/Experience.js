@@ -27,9 +27,10 @@ const Experience = () => {
         {/* Section Header */}
         <div className="py-4 sm:py-8 lgl:py-12 font-titleFont flex flex-col gap-1 sm:gap-4">
           <p className="text-xs sm:text-sm text-designColor tracking-[2px]">Experience</p>
-          <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-white">
-            Internships and Training
-          </h2>
+         <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-black dark:text-white">
+  Internships and Training
+</h2>
+
         </div>
 
         {/* Internship Timeline */}
@@ -41,9 +42,10 @@ const Experience = () => {
               title="Data Science Intern"
               subTitle="NSIC (June 2024 - July 2024)"
               result="Chennai, India"
-              des="Worked on data cleaning, visualization, and ML model building using Python, Pandas, and Scikit-learn."
+              des="Worked on data preprocessing, visualization, and building machine learning models using Python.
+Utilized libraries like Pandas and Scikit-learn for data handling and model development."
             />
-            <SkillTags skills={["Python", "Pandas", "NumPy", "Seaborn", "Scikit-learn", "Data Preprocessing"]} />
+            
           </div>
 
           {/* Web Development Intern */}
@@ -52,9 +54,11 @@ const Experience = () => {
               title="Web Development Intern"
               subTitle="Interpe (Aug 2024 - Sep 2024)"
               result="Remote"
-              des="Built responsive React UIs, integrated APIs, used Git for collaboration, and deployed using Netlify."
+              des="Built responsive UIs with React and integrated REST APIs for dynamic functionality.
+Collaborated using Git and GitHub for version control.
+Deployed projects seamlessly on Netlify for production use."
             />
-            <SkillTags skills={["React.js", "JavaScript", "HTML", "CSS", "Netlify", "Git", "State Management"]} />
+            
           </div>
 
         </div>

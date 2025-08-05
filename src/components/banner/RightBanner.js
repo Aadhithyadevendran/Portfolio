@@ -9,7 +9,11 @@ const RightBanner = () => {
         src={myImage}
         alt="bannerImg"
       />
-      <div className="absolute bottom-0 w-[75%] h-[60%] sm:w-[300px] sm:h-[280px] lgl:w-[500px] lgl:h-[500px] bg-gradient-to-r from-[#1e2024] to-[#202327] shadow-shadowOne flex justify-center items-center"></div>
+      {/* Background glow box */}
+      <div className="absolute bottom-0 w-[75%] h-[60%] sm:w-[300px] sm:h-[280px] lgl:w-[500px] lgl:h-[500px]
+        bg-gradient-to-r from-white to-gray-200 dark:from-[#1e2024] dark:to-[#202327]
+        shadow-lg dark:shadow-shadowOne flex justify-center items-center"
+      ></div>
     </div>
   );
 };

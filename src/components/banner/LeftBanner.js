@@ -23,14 +23,14 @@ const LeftBanner = () => {
   return (
     <div className="w-full lgl:w-1/2 flex flex-col gap-16 sm:gap-20">
       <div className="flex flex-col gap-4 sm:gap-5">
-        <h4 className="text-[12px] sm:text-base font-normal text-gray-400">
+        <h4 className="text-[12px] sm:text-base font-normal text-gray-500 dark:text-gray-400">
           WELCOME TO MY WORLD
         </h4>
-        <h1 className="text-[24px] sm:text-4xl lgl:text-6xl font-bold text-white">
+        <h1 className="text-[24px] sm:text-4xl lgl:text-6xl font-bold text-black dark:text-white">
           Hi, I'm{" "}
           <span className="text-designColor capitalize">Aadhithya D</span>
         </h1>
-        <h2 className="text-[18px] sm:text-3xl lgl:text-4xl font-bold text-white">
+        <h2 className="text-[18px] sm:text-3xl lgl:text-4xl font-bold text-black dark:text-white">
           a <span>{text}</span>
           <Cursor
             cursorBlinking={false}
@@ -38,52 +38,50 @@ const LeftBanner = () => {
             cursorColor="#ff014f"
           />
         </h2>
-        <p className="text-[13px] sm:text-base text-gray-300 leading-6 tracking-wide">
+        <p className="text-[13px] sm:text-base text-gray-700 dark:text-gray-300 leading-6 tracking-wide">
           A Final Year B.Tech Information Technology Student at Saveetha
           Engineering College, Chennai.
         </p>
       </div>
 
       <div className="flex flex-col lgl:flex-row gap-6 justify-between">
-        {/* "Find me in" section - hidden on medium screens and below */}
-<div className="hidden lgl:block">
-  <h2 className="text-[10px] sm:text-sm uppercase font-titleFont mb-3 sm:mb-4 text-gray-400">
-    Find me in
-  </h2>
-  <div className="flex gap-3 sm:gap-4">
-    <a
-      href="https://github.com/Aadhithyadevendran"
-      target="_blank"
-      rel="noreferrer"
-    >
-      <span className="bannerIcon">
-        <FaGithub />
-      </span>
-    </a>
-    <a
-      href="https://www.facebook.com/Aadhithyaa03"
-      target="_blank"
-      rel="noreferrer"
-    >
-      <span className="bannerIcon">
-        <FaFacebookF />
-      </span>
-    </a>
-    <a
-      href="https://www.linkedin.com/in/aadhithyad02"
-      target="_blank"
-      rel="noreferrer"
-    >
-      <span className="bannerIcon">
-        <FaLinkedinIn />
-      </span>
-    </a>
-  </div>
-</div>
-
+        <div className="hidden lgl:block">
+          <h2 className="text-[10px] sm:text-sm uppercase font-titleFont mb-3 sm:mb-4 text-gray-500 dark:text-gray-400">
+            Find me in
+          </h2>
+          <div className="flex gap-3 sm:gap-4">
+            <a
+              href="https://github.com/Aadhithyadevendran"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span className="bannerIcon">
+                <FaGithub />
+              </span>
+            </a>
+            <a
+              href="https://www.facebook.com/Aadhithyaa03"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span className="bannerIcon">
+                <FaFacebookF />
+              </span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/aadhithyad02"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span className="bannerIcon">
+                <FaLinkedinIn />
+              </span>
+            </a>
+          </div>
+        </div>
 
         <div>
-          <h2 className="text-[10px] sm:text-sm uppercase font-titleFont mb-3 sm:mb-4 text-gray-400">
+          <h2 className="text-[10px] sm:text-sm uppercase font-titleFont mb-3 sm:mb-4 text-gray-500 dark:text-gray-400">
             Best Skill On
           </h2>
           <div className="flex gap-3 sm:gap-4">

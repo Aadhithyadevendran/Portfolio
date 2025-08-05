@@ -12,7 +12,8 @@ const Resume = () => {
   const [achievementData, setAchievementData] = useState(false);
 
   return (
-<section id="resume" className="w-full pt- sm:pt-16 lgl:pt-10 border-b-[1px] border-b-black">
+<section id="resume" className="w-full pt-16 lgl:pt-10"
+>
       <div className="flex justify-center items-center text-center">
         <Title des="" />
       </div>

@@ -15,13 +15,11 @@ const Contact = () => {
   const emailValidation = () => {
     return String(email)
       .toLowerCase()
-.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)
+      .match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/);
   };
 
   const handleSend = (e) => {
     e.preventDefault();
-
-    // Validation
     if (username === '') return setErrMsg('Username is required!');
     if (phoneNumber === '') return setErrMsg('Phone number is required!');
     if (email === '') return setErrMsg('Please give your Email!');
@@ -39,15 +37,13 @@ const Contact = () => {
 
     emailjs
       .send(
-        'service_m3aq3re', // Replace with your actual service ID
-        'template_732t80o', // Replace with your actual template ID
+        'service_m3aq3re',
+        'template_732t80o',
         templateParams,
-        'ytUH_n4aXw0Ncgi7o' // Replace with your actual public key
+        'ytUH_n4aXw0Ncgi7o'
       )
-      .then((response) => {
-        setSuccessMsg(
-          `Thank you dear ${username}, your message has been sent successfully!`
-        );
+      .then(() => {
+        setSuccessMsg(`Thank you dear ${username}, your message has been sent successfully!`);
         setErrMsg('');
         setUsername('');
         setPhoneNumber('');
@@ -55,33 +51,29 @@ const Contact = () => {
         setSubject('');
         setMessage('');
       })
-      .catch((error) => {
-        console.error(error);
+      .catch(() => {
         setErrMsg('Something went wrong. Please try again.');
       });
   };
 
   return (
-    <section
-      id="contact"
-      className="w-full py-10 border-b-[1px] border-b-black"
-    >
+    <section id="contact" className="w-full py-10 border-b border-b-gray-300 dark:border-b-black">
       <div className="flex justify-center items-center text-center">
-  <Title title="CONTACT" des="Contact With Me" textSize="text-xl sm:text-2xl md:text-3xl" />
-</div>
+        <Title title="CONTACT" des="Contact With Me" textSize="text-xl sm:text-2xl md:text-3xl" />
+      </div>
 
       <div className="w-full">
-        <div className="w-full h-auto flex flex-col lgl:flex-row justify-between">
+        <div className="w-full flex flex-col lgl:flex-row justify-between">
           <ContactLeft />
-          <div className="w-full lgl:w-[60%] h-full py-10 bg-gradient-to-r from-[#1e2024] to-[#23272b] flex flex-col gap-8 p-4 lgl:p-8 rounded-lg shadow-shadowOne">
+          <div className="w-full lgl:w-[60%] py-10 bg-white dark:bg-gradient-to-r dark:from-[#1e2024] dark:to-[#23272b] flex flex-col gap-8 p-4 lgl:p-8 rounded-lg shadow-[0_10px_40px_rgba(0,0,0,0.2)] dark:shadow-[0_10px_40px_rgba(255,255,255,0.05)] text-black dark:text-white">
             <form onSubmit={handleSend} className="w-full flex flex-col gap-4 lgl:gap-6 py-2 lgl:py-5">
               {errMsg && (
-                <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-orange-500 text-base tracking-wide animate-bounce">
+                <p className="py-3 bg-orange-100 dark:bg-[#2b2b2b] text-center text-orange-500 text-base tracking-wide animate-bounce shadow-sm">
                   {errMsg}
                 </p>
               )}
               {successMsg && (
-                <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-green-500 text-base tracking-wide animate-bounce">
+                <p className="py-3 bg-green-100 dark:bg-[#2b2b2b] text-center text-green-600 text-base tracking-wide animate-bounce shadow-sm">
                   {successMsg}
                 </p>
               )}
@@ -89,28 +81,24 @@ const Contact = () => {
               {/* Name & Phone */}
               <div className="w-full flex flex-col lgl:flex-row gap-10">
                 <div className="w-full lgl:w-1/2 flex flex-col gap-4">
-                  <p className="text-sm text-gray-400 uppercase tracking-wide">
-                    Your name
-                  </p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 uppercase tracking-wide">Your name</p>
                   <input
                     onChange={(e) => setUsername(e.target.value)}
                     value={username}
-                    className={`${
+                    className={`w-full h-12 px-4 border border-gray-300 dark:border-gray-600 rounded-md bg-white text-black focus:outline-none focus:border-designColor transition-all duration-300 ${
                       errMsg === 'Username is required!' && 'outline-designColor'
-                    } contactInput`}
+                    }`}
                     type="text"
                   />
                 </div>
                 <div className="w-full lgl:w-1/2 flex flex-col gap-4">
-                  <p className="text-sm text-gray-400 uppercase tracking-wide">
-                    Phone Number
-                  </p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 uppercase tracking-wide">Phone Number</p>
                   <input
                     onChange={(e) => setPhoneNumber(e.target.value)}
                     value={phoneNumber}
-                    className={`${
+                    className={`w-full h-12 px-4 border border-gray-300 dark:border-gray-600 rounded-md bg-white text-black focus:outline-none focus:border-designColor transition-all duration-300 ${
                       errMsg === 'Phone number is required!' && 'outline-designColor'
-                    } contactInput`}
+                    }`}
                     type="text"
                   />
                 </div>
@@ -118,45 +106,39 @@ const Contact = () => {
 
               {/* Email */}
               <div className="flex flex-col gap-4">
-                <p className="text-sm text-gray-400 uppercase tracking-wide">
-                  Email
-                </p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 uppercase tracking-wide">Email</p>
                 <input
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}
-                  className={`${
+                  className={`w-full h-12 px-4 border border-gray-300 dark:border-gray-600 rounded-md bg-white text-black focus:outline-none focus:border-designColor transition-all duration-300 ${
                     errMsg === 'Please give your Email!' && 'outline-designColor'
-                  } contactInput`}
+                  }`}
                   type="email"
                 />
               </div>
 
               {/* Subject */}
               <div className="flex flex-col gap-4">
-                <p className="text-sm text-gray-400 uppercase tracking-wide">
-                  Subject
-                </p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 uppercase tracking-wide">Subject</p>
                 <input
                   onChange={(e) => setSubject(e.target.value)}
                   value={subject}
-                  className={`${
+                  className={`w-full h-12 px-4 border border-gray-300 dark:border-gray-600 rounded-md bg-white text-black focus:outline-none focus:border-designColor transition-all duration-300 ${
                     errMsg === 'Please give your Subject!' && 'outline-designColor'
-                  } contactInput`}
+                  }`}
                   type="text"
                 />
               </div>
 
               {/* Message */}
               <div className="flex flex-col gap-4">
-                <p className="text-sm text-gray-400 uppercase tracking-wide">
-                  Message
-                </p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 uppercase tracking-wide">Message</p>
                 <textarea
                   onChange={(e) => setMessage(e.target.value)}
                   value={message}
-                  className={`${
+                  className={`w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-md bg-white text-black resize-none focus:outline-none focus:border-designColor transition-all duration-300 ${
                     errMsg === 'Message is required!' && 'outline-designColor'
-                  } contactTextArea`}
+                  }`}
                   rows="8"
                 />
               </div>
@@ -165,23 +147,11 @@ const Contact = () => {
               <div className="w-full">
                 <button
                   type="submit"
-                  className="w-full h-12 bg-[#141518] rounded-lg text-base text-gray-400 tracking-wider uppercase hover:text-white duration-300 hover:border-[1px] hover:border-designColor border-transparent"
+                  className="w-full h-12 bg-black dark:bg-[#141518] rounded-lg text-base text-white tracking-wider uppercase hover:bg-designColor duration-300"
                 >
                   Send Message
                 </button>
               </div>
-
-              {/* Final Message */}
-              {errMsg && (
-                <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-orange-500 text-base tracking-wide animate-bounce">
-                  {errMsg}
-                </p>
-              )}
-              {successMsg && (
-                <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-green-500 text-base tracking-wide animate-bounce">
-                  {successMsg}
-                </p>
-              )}
             </form>
           </div>
         </div>
