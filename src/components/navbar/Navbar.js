@@ -23,11 +23,11 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-0 left-0 w-screen h-[80px] z-50 bg-white dark:bg-bodyColor text-black dark:text-white flex justify-between items-center font-titleFont border-b border-gray-300 dark:border-gray-600 px-4 sm:px-8">
-      <div className="ml-3">
+      <div className="ml-0">
         <img
           src={logo}
           alt="logo"
-          className="w-10 md:w-14 h-auto object-contain"
+          className="w-11 sm:w-14 md:w-14 h-auto object-contain"
         />
       </div>
      

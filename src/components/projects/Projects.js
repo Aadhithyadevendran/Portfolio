@@ -62,7 +62,7 @@ const Projects = () => {
         <Title des="My Projects" />
       </div>
 
-<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 xl:gap-14">
+<div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 xl:gap-14">
         {(showAll ? projects : projects.slice(0, 3)).map((project, index) => (
           <ProjectsCard
             key={index}
