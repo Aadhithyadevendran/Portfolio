@@ -22,15 +22,16 @@ const LeftBanner = () => {
   });
 
   return (
-    <div className="w-full lgl:w-1/2 flex flex-col gap-16 sm:gap-20">
+<div className="w-full lg:w-1/2 flex flex-col gap-4 lg:gap-20">
+
       <div className="flex flex-col gap-4 sm:gap-5">
         <h4 className="text-[12px] sm:text-base font-normal text-gray-500 dark:text-gray-400">
           WELCOME TO MY WORLD
         </h4>
-        <h1 className="text-[24px] sm:text-4xl lgl:text-6xl font-bold text-black dark:text-white">
-          Hi, I'm{" "}
-          <span className="text-designColor capitalize">Aadhithya D</span>
-        </h1>
+        <h1 className="text-[24px] sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black dark:text-white">
+  Hi,I'm <span className="text-designColor capitalize">Aadhithya D</span>
+</h1>
+
         <h2 className="text-[18px] sm:text-3xl lgl:text-4xl font-bold text-black dark:text-white">
           a <span>{text}</span>
           <Cursor
@@ -44,22 +45,26 @@ const LeftBanner = () => {
           Engineering College, Chennai.
         </p>
 
-        <Link
-          to="contact"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className="inline-block w-fit mt-4"
-        >
-          <button className="px-6 py-2 text-sm sm:text-base font-medium text-white bg-designColor rounded-md hover:bg-opacity-80 transition duration-300">
-            Contact Me
-          </button>
-        </Link>
+        <div className="hidden lg:inline-block w-fit mt-4">
+
+  <Link
+    to="contact"
+    spy={true}
+    smooth={true}
+    offset={-70}
+    duration={500}
+    className="inline-block w-fit"
+  >
+    <button className="px-6 py-2 text-sm sm:text-base font-medium text-white bg-designColor rounded-md hover:bg-opacity-80 transition duration-300">
+      Contact Me
+    </button>
+  </Link>
+</div>
+
       </div>
 
       <div className="flex flex-col lgl:flex-row gap-6 justify-between">
-        <div className="hidden lgl:block">
+        <div className="hidden lg:block">
           <h2 className="text-[10px] sm:text-sm uppercase font-titleFont mb-3 sm:mb-4 text-gray-500 dark:text-gray-400">
             Find me in
           </h2>
@@ -94,25 +99,18 @@ const LeftBanner = () => {
           </div>
         </div>
 
-        <div>
-          <h2 className="text-[10px] sm:text-sm uppercase font-titleFont mb-3 sm:mb-4 text-gray-500 dark:text-gray-400">
-            Best Skill On
-          </h2>
-          <div className="flex gap-3 sm:gap-4">
-            <span className="bannerIcon">
-              <FaReact />
-            </span>
-            <span className="bannerIcon">
-              <FaJava />
-            </span>
-            <span className="bannerIcon">
-              <FaPython />
-            </span>
-            <span className="bannerIcon">
-              <FaNodeJs />
-            </span>
-          </div>
-        </div>
+        <div className="hidden lg:block">
+  <h2 className="text-[10px] sm:text-sm uppercase font-titleFont mb-3 sm:mb-4 text-gray-500 dark:text-gray-400">
+    Best Skill On
+  </h2>
+  <div className="flex gap-3 sm:gap-4">
+    <span className="bannerIcon"><FaReact /></span>
+    <span className="bannerIcon"><FaJava /></span>
+    <span className="bannerIcon"><FaPython /></span>
+    <span className="bannerIcon"><FaNodeJs /></span>
+  </div>
+</div>
+
       </div>
     </div>
   );
